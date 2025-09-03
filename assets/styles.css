@@ -50,15 +50,29 @@ a{color:var(--primary);text-decoration:none}
 .cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
 
 /* SERVICES + ICONS (prevent giant icons) */
-.service{display:flex;gap:12px}
-.service .icon{
-  width:44px;height:44px;border-radius:12px;
-  background:#f0fdf4;border:1px solid #dcfce7;
-  display:grid;place-items:center;flex:0 0 44px;
+.service{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;   /* keeps text aligned */
 }
+
+.service .icon{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  background:#f0fdf4;
+  border:1px solid #dcfce7;
+  display:grid;
+  place-items:center;
+  flex:0 0 44px;            /* stop stretching */
+}
+
 .service .icon img{
-  width:24px;height:24px;display:block;
-  max-width:24px;max-height:24px;
+  width:24px;
+  height:24px;
+  max-width:24px;
+  max-height:24px;
+  display:block;
 }
 
 /* BUTTONS */
